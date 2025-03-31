@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors - UI/UX Styleguide</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 2rem 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar-header {
+            padding: 0 1.5rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-header p {
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+
+        .nav {
+            list-style: none;
+            padding: 1.5rem 0;
+        }
+
+        .nav li {
+            padding: 0.5rem 1.5rem;
+        }
+
+        .nav li.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #3498db;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            padding: 2rem;
+            margin-left: 250px;
+            max-width: calc(100% - 250px);
+        }
+
+        .page-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .page-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        /* Components Common Styles */
+        .component {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .component-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .component-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .component-description {
+            color: #7f8c8d;
+        }
+
+        /* Color Styles */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .color-item {
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-preview {
+            height: 120px;
+        }
+
+        .color-info {
+            padding: 1rem;
+            background-color: #fff;
+        }
+
+        .color-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .color-value {
+            font-family: monospace;
+            color: #7f8c8d;
+            font-size: 0.85rem;
+        }
+
+        /* Example Styles */
+        .example-section {
+            margin-top: 1.5rem;
+        }
+
+        .example-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .example-container {
+            padding: 1.5rem;
+            background-color: #f5f5f5;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .example-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .btn-warning {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        .example-alerts {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .alert-info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Accessibility Styles */
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .two-column-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .color-combo {
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            font-weight: 600;
+        }
+
+        .accessibility-card {
+            background-color: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .accessibility-image {
+            width: 100%;
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .accessibility-info {
+            padding: 1rem;
+        }
+
+        .accessibility-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .accessibility-description {
+            font-size: 0.875rem;
+            color: #7f8c8d;
+        }
+
+        .contrast-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .contrast-table th,
+        .contrast-table td {
+            padding: 0.75rem;
+            border: 1px solid #eee;
+            text-align: left;
+        }
+
+        .contrast-table th {
+            background-color: #f5f5f5;
+            font-weight: 600;
+        }
+
+        .contrast-pass {
+            color: #2ecc71;
+            font-weight: 600;
+        }
+
+        .contrast-fail {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .sidebar {
+                width: 200px;
+            }
+            .content {
+                margin-left: 200px;
+                max-width: calc(100% - 200px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 1rem 0;
+            }
+            .content {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 1.5rem;
+            }
+            .sidebar-header {
+                padding: 0 1rem 1rem;
+            }
+            .nav li {
+                padding: 0.5rem 1rem;
+            }
+            .color-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>UI/UX Styleguide</h1>
+                <p>Project design system</p>
+            </div>
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="colors.html">Colors</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="logo.html">Logo</a></li>
+                <li><a href="graphics.html">Graphics</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content - Colors Page -->
+        <div class="content">
+            <header class="page-header">
+                <h2>Color Palette</h2>
+                <p>Our brand and interface colors</p>
+            </header>
+
+            <!-- SECTION 1: Color Palette -->
+            <div class="component">
+                <div class="component-header">
+                    <h3 class="component-title">Color Palette</h3>
+                    <p class="component-description">A comprehensive overview of our brand's color system.</p>
+                </div>
+
+                <!-- Primary Colors -->
+                <div class="component-section">
+                    <h4 class="example-title">Primary Colors</h4>
+                    <p>These colors represent our brand identity and are used for primary elements and actions.</p>
+                    <div class="color-grid">
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #3498db;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Primary Blue</div>
+                                <div class="color-value">#3498db</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #2980b9;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Primary Dark Blue</div>
+                                <div class="color-value">#2980b9</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #2c3e50;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Primary Navy</div>
+                                <div class="color-value">#2c3e50</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Colors -->
+                <div class="component-section" style="margin-top: 2rem;">
+                    <h4 class="example-title">Secondary Colors</h4>
+                    <p>These colors complement our primary palette and are used for secondary elements and accents.</p>
+                    <div class="color-grid">
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #e74c3c;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Accent Red</div>
+                                <div class="color-value">#e74c3c</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #2ecc71;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Accent Green</div>
+                                <div class="color-value">#2ecc71</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #f39c12;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Accent Orange</div>
+                                <div class="color-value">#f39c12</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #9b59b6;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Accent Purple</div>
+                                <div class="color-value">#9b59b6</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neutral Colors -->
+                <div class="component-section" style="margin-top: 2rem;">
+                    <h4 class="example-title">Neutral Colors</h4>
+                    <p>These colors are used for text, backgrounds, and subtle UI elements.</p>
+                    <div class="color-grid">
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #333333;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Text Dark</div>
+                                <div class="color-value">#333333</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #7f8c8d;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Text Medium</div>
+                                <div class="color-value">#7f8c8d</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #bdc3c7;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Text Light</div>
+                                <div class="color-value">#bdc3c7</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #ecf0f1;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Background Light</div>
+                                <div class="color-value">#ecf0f1</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #f9f9f9;"></div>
+                            <div class="color-info">
+                                <div class="color-name">Background Ultra Light</div>
+                                <div class="color-value">#f9f9f9</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #ffffff;"></div>
+                            <div class="color-info">
+                                <div class="color-name">White</div>
+                                <div class="color-value">#ffffff</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: Examples -->
+            <div class="component">
+                <div class="component-header">
+                    <h3 class="component-title">Color Examples</h3>
+                    <p class="component-description">Examples of how our color palette is applied to UI elements.</p>
+                </div>
+
+                <!-- Button Examples -->
+                <div class="example-section">
+                    <h4 class="example-title">Buttons</h4>
+                    <div class="example-container">
+                        <div class="example-buttons">
+                            <button class="btn btn-primary">Primary Button</button>
+                            <button class="btn btn-secondary">Secondary Button</button>
+                            <button class="btn btn-danger">Danger Button</button>
+                            <button class="btn btn-warning">Warning Button</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alert Examples -->
+                <div class="example-section">
+                    <h4 class="example-title">Alerts</h4>
+                    <div class="example-container">
+                        <div class="example-alerts">
+                            <div class="alert alert-info">This is an information alert using our blue color.</div>
+                            <div class="alert alert-success">This is a success alert using our green color.</div>
+                            <div class="alert alert-warning">This is a warning alert using our orange color.</div>
+                            <div class="alert alert-danger">This is an error alert using our red color.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Background Examples -->
+                <div class="example-section">
+                    <h4 class="example-title">Background & Text Combinations</h4>
+                    <div class="color-grid">
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #2c3e50; color: white; display: flex; align-items: center; justify-content: center;">
+                                White text on dark background
+                            </div>
+                            <div class="color-info">
+                                <div class="color-name">Dark Background with Light Text</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #ecf0f1; color: #333; display: flex; align-items: center; justify-content: center;">
+                                Dark text on light background
+                            </div>
+                            <div class="color-info">
+                                <div class="color-name">Light Background with Dark Text</div>
+                            </div>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-preview" style="background-color: #3498db; color: white; display: flex; align-items: center; justify-content: center;">
+                                White text on color background
+                            </div>
+                            <div class="color-info">
+                                <div class="color-name">Brand Color with Light Text</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: Accessibility -->
+            <div class="component">
+                <div class="component-header">
+                    <h3 class="component-title">Accessibility & Color</h3>
+                    <p class="component-description">Guidelines for ensuring our color usage meets accessibility standards.</p>
+                </div>
+
+                <!-- Accessibility Guidelines -->
+                <div class="component-section">
+                    <p>Our color system is designed with accessibility in mind. We ensure that:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 1.5rem;">
+                        <li>Text and interactive elements have sufficient color contrast (WCAG 2.1 AA compliant)</li>
+                        <li>Color is not the only means of conveying information</li>
+                        <li>Text on colored backgrounds maintains readability</li>
+                        <li>We accommodate users with various types of color blindness</li>
+                    </ul>
+                </div>
+
+                <!-- Contrast Examples -->
+                <div class="component-section">
+                    <h4 class="example-title">Contrast Ratio Examples</h4>
+                    <div class="two-column-grid">
+                        <div>
+                            <div class="color-combo" style="background-color: #2c3e50; color: white;">
+                                White text on Primary Navy (7.9:1)
+                            </div>
+                            <div class="color-combo" style="background-color: #3498db; color: white;">
+                                White text on Primary Blue (2.9:1)
+                            </div>
+                            <div class="color-combo" style="background-color: #f9f9f9; color: #333;">
+                                Dark text on Light Background (13.7:1)
+                            </div>
+                        </div>
+                        <div>
+                            <table class="contrast-table">
+                                <thead>
+                                    <tr>
+                                        <th>Color Combination</th>
+                                        <th>Contrast Ratio</th>
+                                        <th>WCAG AA (4.5:1)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>White on Navy</td>
+                                        <td>7.9:1</td>
+                                        <td class="contrast-pass">Pass</td>
+                                    </tr>
+                                    <tr>
+                                        <td>White on Blue</td>
+                                        <td>2.9:1</td>
+                                        <td class="contrast-fail">Fail</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dark on Light BG</td>
+                                        <td>13.7:1</td>
+                                        <td class="contrast-pass">Pass</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">For text that fails the contrast test, we either:</p>
+                    <ol style="margin-left: 20px; margin-top: 0.5rem;">
+                        <li>Use larger and bolder text (minimum 18pt or 14pt bold)</li>
+                        <li>Choose a different color combination</li>
+                        <li>Add additional visual cues beyond color</li>
+                    </ol>
+                </div>
+
+                <!-- Color Blindness -->
+                <div class="component-section" style="margin-top: 2rem;">
+                    <h4 class="example-title">Color Blindness Considerations</h4>
+                    <div class="two-column-grid">
+                        <div class="accessibility-card">
+                            <div class="accessibility-image">
+                                <img src="/api/placeholder/400/320" alt="Normal vision color palette" />
+                            </div>
+                            <div class="accessibility-info">
+                                <div class="accessibility-title">Normal Vision</div>
+                                <div class="accessibility-description">
+                                    How our color palette appears with normal color vision.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accessibility-card">
+                            <div class="accessibility-image">
+                                <img src="/api/placeholder/400/320" alt="Deuteranopia simulation" />
+                            </div>
+                            <div class="accessibility-info">
+                                <div class="accessibility-title">Deuteranopia (Red-Green Color Blindness)</div>
+                                <div class="accessibility-description">
+                                    Simulation of how our palette appears to people with deuteranopia.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="two-column-grid" style="margin-top: 2rem;">
+                        <div class="accessibility-card">
+                            <div class="accessibility-image">
+                                <img src="/api/placeholder/400/320" alt="Protanopia simulation" />
+                            </div>
+                            <div class="accessibility-info">
+                                <div class="accessibility-title">Protanopia (Red-Green Color Blindness)</div>
+                                <div class="accessibility-description">
+                                    Simulation of how our palette appears to people with protanopia.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accessibility-card">
+                            <div class="accessibility-image">
+                                <img src="/api/placeholder/400/320" alt="Tritanopia simulation" />
+                            </div>
+                            <div class="accessibility-info">
+                                <div class="accessibility-title">Tritanopia (Blue-Yellow Color Blindness)</div>
+                                <div class="accessibility-description">
+                                    Simulation of how our palette appears to people with tritanopia.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
