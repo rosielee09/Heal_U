@@ -159,14 +159,11 @@ td li {
 }
 
 
-
-.content-image {
+img{
   margin: auto;
   display: block;
-  padding: 1rem;
 }
-
-.center {
+ figcaption {
   text-align: center;
 }
 

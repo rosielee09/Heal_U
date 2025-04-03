@@ -159,14 +159,13 @@ td li {
 }
 
 
-
-.content-image {
+figure img{
   margin: auto;
   display: block;
-  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.center {
+ figcaption {
   text-align: center;
 }
 
@@ -221,15 +220,6 @@ td li {
 
 .small {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #212529;
-}
-
-.small-italic {
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
