@@ -158,18 +158,6 @@ td li {
   padding-left: 0;
 }
 
-
-
-.content-image {
-  margin: auto;
-  display: block;
-  padding: 1rem;
-}
-
-.center {
-  text-align: center;
-}
-
 /* Typography styles */
 .heading1 {
   font-family: 'Roboto', sans-serif;
@@ -221,15 +209,6 @@ td li {
 
 .small {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #212529;
-}
-
-.small-italic {
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
