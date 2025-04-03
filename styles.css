@@ -123,10 +123,15 @@ body {
 /* Color Styles */
 .color-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
     gap: 1.5rem;
 }
 
+.color-grid__onlycolor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    gap: 1.5rem;
+}
 .color-item {
     border-radius: 6px;
     overflow: hidden;
@@ -151,6 +156,46 @@ body {
     font-family: monospace;
     color: #7f8c8d;
     font-size: 0.85rem;
+}
+
+.color__primary--preview{
+    background-color: #29424D;
+}
+
+.color__secondary--preview{
+    background-color: #CFC4F4;
+}
+
+.color__tertiary--preview {
+    background-color: #F8F3EC;
+}
+
+.color__accent--preview{
+    background-color: #CDF06B;
+} 
+
+.color__success--preview{
+    background-color: #138636;
+}
+
+.color__error--preview{
+    background-color: #C32D2D;
+}
+
+.color__warning--preview{
+    background-color: #FFBD11;
+}
+
+.color__info--preview{
+    background-color: #4976BA;
+}
+
+.color__background--preview{
+    background-color: #fff;
+}
+
+.color__text--preview{
+    background-color: #2E2E30;
 }
 
 /* Typography Styles */
