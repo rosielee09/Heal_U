@@ -120,88 +120,6 @@ body {
     color: #7f8c8d;
 }
 
-<<<<<<< HEAD
-    /* Color Styles */
-.color-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.color-grid__onlycolor {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-    gap: 1.5rem;
-}
-.color-item {
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.color-preview {
-    height: 120px;
-}
-
-.color-info {
-    padding: 1rem;
-    background-color: #fff;
-}
-
-.color-name {
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.color-value {
-    font-family: monospace;
-    color: #7f8c8d;
-    font-size: 0.85rem;
-}
-
-.color__primary--preview{
-    background-color: #29424D;
-}
-
-.color__secondary--preview{
-    background-color: #CFC4F4;
-}
-
-.color__tertiary--preview {
-    background-color: #F8F3EC;
-}
-
-.color__accent--preview{
-    background-color: #CDF06B;
-} 
-
-.color__success--preview{
-    background-color: #138636;
-}
-
-.color__error--preview{
-    background-color: #C32D2D;
-}
-
-.color__warning--preview{
-    background-color: #FFBD11;
-}
-
-.color__info--preview{
-    background-color: #4976BA;
-}
-
-.color__background--preview{
-    background-color: #fff;
-}
-
-.color__text--preview{
-    background-color: #2E2E30;
-}
-
-
-    
-=======
 
 /* Typography */
 /* Import Roboto font with multiple weights */
@@ -225,7 +143,6 @@ th {
   text-align: left;
   font-weight: 500;
   border-bottom: 2px solid #dee2e6;
->>>>>>> fc46e287cb8592456c25c46e42ba59dc95a100a5
 }
 
 td {
@@ -242,23 +159,11 @@ td li {
 }
 
 
-
-.content-image {
-  margin: auto;
-  display: block;
-  padding: 1rem;
-}
-
-.center {
+figure, figcaption {
   text-align: center;
+  margin: auto;
 }
 
-<<<<<<< HEAD
-/* Typography Styles */
-.typography-item {
-    margin-bottom: 2rem;
-}
-=======
 /* Typography styles */
 .heading1 {
   font-family: 'Roboto', sans-serif;
@@ -266,7 +171,6 @@ td li {
   line-height: 48px;
   font-weight: 700;
   color: #212529;
->>>>>>> fc46e287cb8592456c25c46e42ba59dc95a100a5
 }
 
 .heading2 {
@@ -301,35 +205,16 @@ td li {
   color: #212529;
 }
 
-<<<<<<< HEAD
-/* Logo Styles */
-
-.logo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
-}
-=======
 .body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #212529;
->>>>>>> fc46e287cb8592456c25c46e42ba59dc95a100a5
 }
 
 .small {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #212529;
-}
-
-.small-italic {
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
