@@ -216,7 +216,23 @@ body {
     align-items: center;
 }
     
-=======
+
+/* Graphics */
+.graphic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    gap: 1.5rem;
+    
+}
+
+.graphic-item{
+   justify-items: center;
+}
+
+.graphic-menu__icon{
+    margin: 10px;
+}
+
 
 /* Typography */
 /* Import Roboto font with multiple weights */
@@ -268,12 +284,12 @@ td li {
   text-align: center;
 }
 
-<<<<<<< HEAD
+HEAD
 /* Typography Styles */
 .typography-item {
     margin-bottom: 2rem;
 }
-=======
+
 /* Typography styles */
 .heading1 {
   font-family: 'Roboto', sans-serif;
@@ -316,22 +332,13 @@ td li {
   color: #212529;
 }
 
-<<<<<<< HEAD
-/* Logo Styles */
 
-.logo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
-}
-=======
 .body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #212529;
->>>>>>> fc46e287cb8592456c25c46e42ba59dc95a100a5
 }
 
 .small {
