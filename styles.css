@@ -258,7 +258,8 @@ body {
 
 
 /* section illustrations */
-.graphic-grid-illustrations{
+.graphic-grid-illustrations,
+.graphic-grid-images{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
@@ -268,6 +269,10 @@ body {
     max-width: 200px;
     max-height: 200px;
 }
+.graphic-icons{
+    border-radius: 20px;
+}
+
 /* Typography */
 
 /* Import Roboto font with multiple weights */
