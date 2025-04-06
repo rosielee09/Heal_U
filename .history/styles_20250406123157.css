@@ -566,12 +566,8 @@ tbody tr:nth-child(odd) {
 /* Logo */
 
 .title-inter {
-    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
     font-family: 'Inter', sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    line-height: 32px;
-    letter-spacing: 0.5px;
+    font-size: 20px;
 }
 
 
