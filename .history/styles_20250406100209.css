@@ -134,12 +134,7 @@ body {
     gap: 1.5rem;
 }
 
-.color-grid__onlycolor {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-    gap: 1.5rem;
-    align-items: start;
-}
+
 
 .color-grid__Accessiblilliy {
     display: grid;

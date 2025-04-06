@@ -138,7 +138,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
     gap: 1.5rem;
-    align-items: start;
+    align-items: center;
 }
 
 .color-grid__Accessiblilliy {
