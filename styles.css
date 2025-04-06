@@ -272,6 +272,7 @@ video {
     align-items: start;
 }
 
+  
 .color-item {
     border-radius: 6px;
     overflow: hidden;
@@ -347,7 +348,15 @@ video {
     align-items: center;
 }
     
+.color-bold-title{
+    font-weight: bold;
+  }
 
+.color-explain{
+    padding:5px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
 
 /* Graphics */
 .graphic-grid {
