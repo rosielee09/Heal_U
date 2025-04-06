@@ -363,6 +363,7 @@ video {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
     gap: 1.5rem;
+    align-items: center;
     
 }
 
@@ -371,12 +372,18 @@ video {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1.5rem;
+    justify-items: flex-start;
 }
 
-.graphic-item{
-   justify-items: center;
-
+.graphic-grid__button{
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+    gap: 1.5rem;
+    justify-items: flex-start;
 }
+
+
+
 
 
 .graphic-menu__icon{
