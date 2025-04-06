@@ -16,7 +16,9 @@ hr {
     border: 0.4px solid white;
 }
 
-
+img {
+    padding-top: 1rem;
+}
 /* Layout */
 .container {
     display: flex;

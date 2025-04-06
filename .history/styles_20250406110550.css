@@ -12,10 +12,12 @@ body {
 }
 
 hr {
+    border-top: 0.4px, white;
     padding: 1rem;
-    border: 0.4px solid white;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
 }
-
 
 /* Layout */
 .container {
@@ -125,13 +127,12 @@ hr {
     font-size: 2rem;
     font-weight: 600;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     color: #2c3e50;
 }
 
 .component-description {
     color: #7f8c8d;
-    padding-bottom: 1rem;
 }
 
 

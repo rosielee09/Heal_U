@@ -16,7 +16,6 @@ hr {
     border: 0.4px solid white;
 }
 
-
 /* Layout */
 .container {
     display: flex;
@@ -125,7 +124,7 @@ hr {
     font-size: 2rem;
     font-weight: 600;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     color: #2c3e50;
 }
 

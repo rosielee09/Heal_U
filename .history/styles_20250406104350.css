@@ -11,12 +11,6 @@ body {
     background-color: #f9f9f9;
 }
 
-hr {
-    padding: 1rem;
-    border: 0.4px solid white;
-}
-
-
 /* Layout */
 .container {
     display: flex;
@@ -125,13 +119,12 @@ hr {
     font-size: 2rem;
     font-weight: 600;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     color: #2c3e50;
 }
 
 .component-description {
     color: #7f8c8d;
-    padding-bottom: 1rem;
 }
 
 
@@ -253,18 +246,12 @@ hr {
 
 
 .graphic-menu__icon{
-    padding: 8px;
-    border: 0.4px solid lightgrey;
-    border-radius: 8px;
+    margin: 6px;
+    border: 1px solid #7f8c8d;
 }
-
 .graphic-title{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.graphic-title-desc{
-    margin-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .graphic-item-grid1{
