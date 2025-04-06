@@ -248,10 +248,25 @@ hr {
     align-items: start;
 }
 
+
+.color-grid__example {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+    gap: 1.5rem;
+    align-items: start;
+}
+
 .color-grid__Accessiblilliy {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 50%, 400px), 1fr));
     gap: 1.5rem;
+}
+
+.color-grid__expressive {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
 }
 
 .color-item {
