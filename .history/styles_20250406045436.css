@@ -446,7 +446,7 @@ body {
 
     color: #F8F3EC;
     font-size: 8rem;
-    line-height: 1.2;
+    line-height: 1.4;
     font-weight: bold;
     letter-spacing: 2px;
     font-family: 'Roboto', sans-serif;
@@ -470,13 +470,8 @@ body {
 
   }
 
-  .animation--title {
+  .blob--wrapper {
     text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-left: 55rem;
-    
 
   }
 

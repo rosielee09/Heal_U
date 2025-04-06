@@ -470,13 +470,9 @@ body {
 
   }
 
-  .animation--title {
+  .blob--wrapper {
     text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-left: 55rem;
-    
+    left: 80%;
 
   }
 

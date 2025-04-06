@@ -445,7 +445,7 @@ body {
   .animation--title-head {
 
     color: #F8F3EC;
-    font-size: 8rem;
+    font-size: 20vmin;
     line-height: 1.2;
     font-weight: bold;
     letter-spacing: 2px;
@@ -456,27 +456,16 @@ body {
 
   .animation--title-subhead {
     color: #F8F3EC;
-    font-size: 2rem;
-    line-height: 2;
+    font-size: 5vmin;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: 2px;
     font-family: 'Roboto', sans-serif;
-    font-style: italic;
+    text-transform: uppercase;
   }
   
-  .animation--title-member {
-    color: #F8F3EC;
-    font-size: 1.4rem;
-    line-height: 1.4;
-    font-family: 'Roboto', sans-serif;
-
-  }
-
-  .animation--title {
+  .blob--wrapper {
     text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-left: 55rem;
-    
 
   }
 
