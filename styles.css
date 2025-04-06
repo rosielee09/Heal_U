@@ -415,6 +415,9 @@ video {
     padding: 10px;
     border-radius: 16px;
 }
+.graphic-icons-image{
+    border-radius: 24px;
+}
 
 /* Typography */
 
